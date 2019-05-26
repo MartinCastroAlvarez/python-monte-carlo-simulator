@@ -1,0 +1,38 @@
+{
+    "features": {
+        "UnfavorableLaw": {
+             "distribution": "binomial",
+             "success_rate": 0.02
+        },
+        "Sales": {
+            "distribution": "normal",
+            "avg": 100,
+            "std": 0.8,
+            "min": 0
+        },
+        "Price": {
+            "distribution": "normal",
+            "avg": 10,
+            "std": 0.2,
+            "min": 0
+        },
+        "FixedCost": {
+            "distribution": "normal",
+            "avg": 100,
+            "std": 0.5,
+            "min": 0
+        },
+        "VariableCost": {
+            "distribution": "normal",
+            "avg": 8,
+            "std": 2,
+            "min": 0
+        }
+    },
+    "targets": [{
+        "Revenue": "Price * Sales",
+        "Cost": "FixedCost + VariableCost * Sales"
+    }, {
+        "Profit": "Revenue - Cost"
+    }]
+}
